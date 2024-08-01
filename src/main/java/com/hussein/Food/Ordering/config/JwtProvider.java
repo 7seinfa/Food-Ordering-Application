@@ -13,8 +13,11 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * This class generates JWTs depending on user.
+ * @author Hussein Abdallah
+ */
 @Service
-
 public class JwtProvider {
     private SecretKey key = Keys.hmacShaKeyFor(JwtConstant.SECRET_KEY.getBytes());
 

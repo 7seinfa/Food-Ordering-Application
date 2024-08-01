@@ -6,6 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * This entity represents an ingredient.
+ * @author Hussein Abdallah
+ */
 @Data
 @Entity
 @NoArgsConstructor

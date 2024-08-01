@@ -10,6 +10,10 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * This entity represents an order containing a number of order items.
+ * @author Hussein Abdallah
+ */
 @Entity
 @Data
 @NoArgsConstructor

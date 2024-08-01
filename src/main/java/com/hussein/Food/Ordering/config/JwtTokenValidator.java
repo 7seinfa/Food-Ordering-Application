@@ -20,6 +20,11 @@ import javax.crypto.SecretKey;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * This class filters and sets up security by validating the JWT and extracting the claims/authorities from it..
+ * It extends the once per request filter so that it runs on each request.
+ * @author Hussein Abdallah
+ */
 public class JwtTokenValidator extends OncePerRequestFilter {
 
     @Override

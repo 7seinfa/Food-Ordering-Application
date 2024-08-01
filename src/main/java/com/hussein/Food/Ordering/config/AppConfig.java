@@ -16,6 +16,10 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import java.util.Arrays;
 import java.util.Collections;
 
+/**
+ * The configuration of the website, including the link, roles authorization, and password encoder.
+ * @author Hussein Abdallah
+ */
 @Configuration
 @EnableWebSecurity
 public class AppConfig {

@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This entity represents an ingredients category.
+ * @author Hussein Abdallah
+ */
 @Entity
 @Data
 @NoArgsConstructor

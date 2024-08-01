@@ -14,6 +14,11 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This service is responsible for loading user details based on the email address provided
+ * during authentication, for use with Spring Security later.
+ * @author Hussein Abdallah
+ */
 @Service
 public class CustomerUserDetailsService implements UserDetailsService {
     @Autowired

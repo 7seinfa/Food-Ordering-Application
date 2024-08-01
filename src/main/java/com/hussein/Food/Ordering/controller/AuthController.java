@@ -26,6 +26,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
 
+/**
+ * This class consists of the REST requests which will be called to sign in or create accounts with
+ * authentication. The two links provided for this are [URL]/auth/signup and [URL]/auth/login.
+ * Both are post requests.
+ * @author Hussein Abdallah
+ */
+
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -44,6 +51,13 @@ public class AuthController {
     @Autowired
     private CartRepository cartRepository;
 
+    /**
+     * The signup API, which is called to create a new user. Located at [URL]/auth/signup
+     * @param user the user object of the user which should be created.
+     *             This requires the email, password, full-name, and role to be filled out.
+     * @return a response indicating the registration was successful
+     * @throws Exception the account could not be created
+     */
     @PostMapping("/signup")
     public ResponseEntity<AuthResponse> createUserHandler(@RequestBody User user) throws Exception {
         User isEmailExist = userRepository.findByEmail(user.getEmail());
@@ -77,7 +91,13 @@ public class AuthController {
         return new ResponseEntity<>(authResponse, HttpStatus.CREATED);
     }
 
-    @PostMapping("/signin")
+    /**
+     * The login API, which is used to authenticate a user's log-in attempt.Located at [URL]/auth/login
+     * @param loginRequest the username and password of the user to sign into
+     * @return a response indicating the login was successful
+     * @throws Exception the login failed
+     */
+    @PostMapping("/login")
     public ResponseEntity<AuthResponse> loginHandler(@RequestBody LoginRequest loginRequest) throws Exception {
         Authentication authentication =  authenticate(loginRequest.getEmail(), loginRequest.getPassword());
 
@@ -95,6 +115,13 @@ public class AuthController {
         return new ResponseEntity<>(authResponse, HttpStatus.OK);
     }
 
+    /**
+     * A function to authenticate a user, checking if it exists in the database
+     * and if the password matches.
+     * @param email the email of the user
+     * @param password the password of the user
+     * @return a UsernamePasswordAuthenticationToken with the details of the user
+     */
     private Authentication authenticate(String email, String password) {
         UserDetails userDetails = customerUserDetailsService.loadUserByUsername(email);
         if (userDetails==null) {

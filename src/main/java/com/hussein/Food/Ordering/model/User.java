@@ -10,11 +10,15 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This entity represents a user
+ * @author Hussein Abdallah
+ */
+
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class User {
 
     @Id

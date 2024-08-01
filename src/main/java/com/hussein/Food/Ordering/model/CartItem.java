@@ -8,6 +8,10 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * This entity represents each item in the cart.
+ * @author Hussein Abdallah
+ */
 @Entity
 @Data
 @NoArgsConstructor

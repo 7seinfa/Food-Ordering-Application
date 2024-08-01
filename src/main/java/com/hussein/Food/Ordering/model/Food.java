@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * This entity represents a food item.
+ * @author Hussein Abdallah
+ */
 @Entity
 @Data
 @NoArgsConstructor

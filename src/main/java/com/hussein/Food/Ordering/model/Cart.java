@@ -8,6 +8,10 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This entity represents a user's shopping cart.
+ * @author Hussein Abdallah
+ */
 @Entity
 @Data
 @NoArgsConstructor

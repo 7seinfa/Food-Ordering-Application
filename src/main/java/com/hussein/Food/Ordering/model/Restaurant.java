@@ -10,6 +10,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This entity represents a restaurant.
+ * @author Hussein Abdallah
+ */
 @Data
 @Entity
 @NoArgsConstructor

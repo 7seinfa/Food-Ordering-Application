@@ -7,6 +7,10 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * This entity represents an order item.
+ * @author Hussein Abdallah
+ */
 @Entity
 @Data
 @NoArgsConstructor
