@@ -52,7 +52,7 @@ public class AdminRestaurantController {
      * @return the updated restaurant
      * @throws Exception if jwt is invalid or if restaurant not found
      */
-    @PutMapping("/{id}/update")
+    @PutMapping("/{id}")
     public ResponseEntity<Restaurant> updateRestaurant(
             @RequestBody CreateRestaurantRequest req,
             @RequestHeader("Authorization") String jwt,
@@ -72,7 +72,7 @@ public class AdminRestaurantController {
      * @return a message stating the restaurant has been deleted.
      * @throws Exception if jwt is invalid or if restaurant not found
      */
-    @DeleteMapping("/{id}/delete")
+    @DeleteMapping("/{id}")
     public ResponseEntity<MessageResponse> deleteRestaurant(
             @RequestHeader("Authorization") String jwt,
             @PathVariable Long id

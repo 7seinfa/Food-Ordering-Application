@@ -85,7 +85,7 @@ public class RestaurantController {
      * @return the RestaurantDto of the favourited restaurant
      * @throws Exception if jwt is invalid or if user not found
      */
-    @GetMapping("/{id}/add-to-favourites")
+    @PutMapping("/{id}")
     public ResponseEntity<RestaurantDto> addToFavourites(
             @RequestHeader("Authorization") String jwt,
             @PathVariable Long id) throws Exception{

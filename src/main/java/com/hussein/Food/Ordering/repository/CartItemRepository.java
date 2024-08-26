@@ -1,12 +1,11 @@
 package com.hussein.Food.Ordering.repository;
 
-import com.hussein.Food.Ordering.model.Cart;
+import com.hussein.Food.Ordering.model.CartItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * This holds the repository of carts.
  * @author Hussein Abdallah
  */
-public interface CartRepository extends JpaRepository<Cart, Long> {
-    public Cart findByCustomerId (Long userId);
+public interface CartItemRepository extends JpaRepository<CartItem, Long> {
 }
